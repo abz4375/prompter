@@ -1,0 +1,22 @@
+{
+    "name": "Prompter",
+    "version": "0.0.1",
+    "description": "Saves prompts for future reuse",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://bard.google.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://bard.google.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {},
+      "default_title": "Prompter",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+  }
