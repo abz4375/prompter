@@ -17,8 +17,6 @@
       ["prompter.abz4375"]: JSON.stringify([...savedPrompts,newPrompt])
     });
 
-    console.log("Prompt was saved: ")
-    console.log(newPrompt)
   };
   
   
@@ -83,6 +81,7 @@
       textarea.style.overflowY = 'scroll';
       textarea.className = `focus:text-gray-300 text-gray-500 block w-full rounded-md bg-gray-900 border border-gray-600 px-3 py-2 placeholder-gray-400 shadow-sm outline-primary focus:border-primary focus:outline-none focus:ring-primary ring-primary sm:text-sm`;
       textarea.innerText = pContent;
+      let templateContent = pContent;
       textarea.contentEditable = true;
       promptContent.appendChild(textarea);
       
@@ -103,7 +102,7 @@
       copyBtn.onclick = async() => {
         navigator.clipboard.writeText(promptContent.innerText);
         setTimeout(()=>{
-          textarea.innerText = pContent;
+          textarea.innerText = templateContent;
         },10000)
       }
         
@@ -144,6 +143,7 @@
         })
         saveBtn.onclick = async() => {
           promptTitle.readOnly = true;
+          templateContent = promptContent.innerText;
           saveThePrompt({pTitle:""+promptTitle.value,pContent:""+promptContent.innerText});
           promptWindow.removeChild(saveBtn);
         }
