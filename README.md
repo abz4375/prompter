@@ -37,5 +37,6 @@
 > `Note`: The Extenision saves your prompts only to your local machine, it doesn't upload any kind of data to any Cloud service. Your privacy is secured 👍
   
 > `🥚Fun Feature`: Just Save your Template and you can re-edit the template by typing into the block, Dont worry, just modify your template and hit the Copy Button, the extensions restores your saved Template within 10 seconds. Give it a try 😉
-> ![image](https://github.com/abz4375/prompter/assets/90337098/7b74f76e-2dc8-47c3-9a0b-bb4b6341a393)
+
+![image](https://github.com/abz4375/prompter/assets/90337098/7b74f76e-2dc8-47c3-9a0b-bb4b6341a393)
 
