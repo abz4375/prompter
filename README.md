@@ -1,2 +1,2 @@
-# prompter
-Prompter is an add on to the Prompt Storm extension, which allows to add your own set of prompts for Google Bard.
+# Prompter **- custom prompts**
+Prompter is an add-on for the [Prompt Storm](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension, which allows to add your own set of prompt-templates for [Google Bard](https://bard.google.com). 
