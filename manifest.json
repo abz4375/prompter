@@ -1,6 +1,6 @@
 {
     "name": "Prompter",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Saves prompts for future reuse",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://bard.google.com/*"],
