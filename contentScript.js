@@ -66,6 +66,7 @@
       // Prompt window
       const promptWindow = document.createElement("div");
       promptWindow.className = `bg-black rounded-xl p-4 mt-2`;
+      promptWindow.style.transition = 'all 0.125s ease-out 0s';
       // Prompt title
       const promptTitle = document.createElement("input");
       promptTitle.placeholder = "Enter Title";
@@ -95,10 +96,12 @@
       copyBtn.innerHTML = `<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#4db6ac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7.5 3H14.6C16.8402 3 17.9603 3 18.816 3.43597C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C21 6.03969 21 7.15979 21 9.4V16.5M6.2 21H14.3C15.4201 21 15.9802 21 16.408 20.782C16.7843 20.5903 17.0903 20.2843 17.282 19.908C17.5 19.4802 17.5 18.9201 17.5 17.8V9.7C17.5 8.57989 17.5 8.01984 17.282 7.59202C17.0903 7.21569 16.7843 6.90973 16.408 6.71799C15.9802 6.5 15.4201 6.5 14.3 6.5H6.2C5.0799 6.5 4.51984 6.5 4.09202 6.71799C3.71569 6.90973 3.40973 7.21569 3.21799 7.59202C3 8.01984 3 8.57989 3 9.7V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.0799 21 6.2 21Z" stroke="#4db6ac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
       copyBtn.firstElementChild.style.transition = "all 0.125s ease-out 0s";
       copyBtn.addEventListener("mousedown", function () {
-        this.firstElementChild.style.display = "none";
+        // this.firstElementChild.style.display = "none";
+        this.style.opacity = 0;
       });
       copyBtn.addEventListener("mouseup", function () {
-        this.firstElementChild.style.display = ``;
+        // this.firstElementChild.style.display = ``;
+        this.style.opacity = 1;
       });
 
       copyBtn.onclick = async () => {
@@ -116,10 +119,12 @@
       delBtn.innerHTML = `<svg fill="#4db6ac" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#4db6ac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z"></path></g></svg>`;
       delBtn.firstElementChild.style.transition = "all 0.125s ease-out 0s";
       delBtn.addEventListener("mousedown", function () {
-        this.firstElementChild.style.display = "none";
+        // this.firstElementChild.style.display = "none";
+        this.style.opacity = 0;
+        promptWindow.style.opacity = 0;
       });
       delBtn.addEventListener("mouseup", function () {
-        this.firstElementChild.style.display = ``;
+        // this.firstElementChild.style.display = ``;
       });
       delBtn.onclick = async () => {
         savedPrompts = savedPrompts.filter((b) => b !== prompt);
@@ -137,10 +142,10 @@
       saveBtn.innerHTML = `<svg fill="#4db6ac" height="16px" width="16px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#4db6ac" stroke-width="11.264"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M507.109,71.673L440.327,4.891C437.196,1.76,432.951,0,428.522,0C425.038,0,53.485,0,50.087,0C22.469,0,0,22.469,0,50.087 v411.826C0,489.531,22.469,512,50.087,512c15.731,0,396.124,0,411.826,0C489.531,512,512,489.531,512,461.913V83.478 C512,79.049,510.24,74.804,507.109,71.673z M200.348,33.391h178.087v100.174H200.348V33.391z M133.565,33.391h33.391v100.174 h-33.391V33.391z M378.435,478.609h-244.87v-33.391h244.87V478.609z M378.435,411.826h-244.87v-33.391h244.87V411.826z M378.435,345.043h-244.87v-33.391h244.87V345.043z M478.609,461.913c0,9.206-7.49,16.696-16.696,16.696h-50.087V294.957 c0-9.22-7.475-16.696-16.696-16.696H116.87c-9.22,0-16.696,7.475-16.696,16.696v183.652H50.087 c-9.206,0-16.696-7.49-16.696-16.696V50.087c0-9.206,7.49-16.696,16.696-16.696h50.087v116.87c0,9.22,7.475,16.696,16.696,16.696 H395.13c9.22,0,16.696-7.475,16.696-16.696V33.391h9.78l57.002,57.002V461.913z"></path> </g> </g> </g></svg>`;
       saveBtn.firstElementChild.style.transition = "all 0.125s ease-out 0s";
       saveBtn.addEventListener("mousedown", function () {
-        this.firstElementChild.style.display = "none";
+        this.style.opacity = 0;
       });
       saveBtn.addEventListener("mouseup", function () {
-        this.firstElementChild.style.display = ``;
+        this.style.opacity = 1;
       });
       saveBtn.onclick = async () => {
         if (!(promptTitle.value === `` && promptContent.innerText === ``)) {
@@ -160,20 +165,26 @@
       promptWindow.appendChild(delBtn);
       promptWindow.appendChild(saveBtn);
       promptWindow.appendChild(promptContent);
-      if (pTitle !== undefined && pContent !== undefined)
+      if (pTitle !== undefined && pContent !== undefined){
+        promptWindow.style.opacity = 0;
         promptStack.appendChild(promptWindow);
+        setTimeout(function(){promptWindow.style.opacity = 1;},125)
+        // promptWindow.style.opacity = 1;
+      }
 
       // if readonly content is added
       if (!(pTitle === `` && pContent === ``)) {
         promptTitle.readOnly = true;
         promptWindow.removeChild(saveBtn);
       }
+
     };
 
     // Load the Content
     savedPrompts = await fetchSavedPrompts();
     savedPrompts.forEach((sPrompt) => {
       pushPrompt(sPrompt);
+      // setTimeout(function(){pushPrompt(sPrompt);},1000)
     });
 
     // Funtionality to add a new Prompt
@@ -192,14 +203,15 @@
       )[0];
 
       if (sideMenuOpens) {
+        prompterPanel.style.opacity = 0;
         !document.getElementsByClassName(prompterPanel.className)[0]
           ? sideMenuContent.appendChild(prompterPanel)
           : {};
-        prompterPanel.style.opacity = 0;
-        prompterPanel.style.opacity = 1;
+        // prompterPanel.style.opacity = 1;
+        setTimeout(function(){prompterPanel.style.opacity = 1;},125)
       } else {
         while (document.getElementsByClassName(prompterPanel.className)[0]) {
-          prompterPanel.style.opacity = 0;
+          setTimeout(function(){prompterPanel.style.opacity = 0;},125)
           document.getElementsByClassName(prompterPanel.className)[0].remove();
         }
       }
