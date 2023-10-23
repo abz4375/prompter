@@ -14,7 +14,12 @@
       }
     ],
     "action": {
-      "default_icon": {},
+      "default_icon": {
+        "16": "assets/Prompter.png",
+        "24": "assets/Prompter.png",
+        "32": "assets/Prompter.png",
+        "64": "assets/Prompter.png"
+      },
       "default_title": "Prompter",
       "default_popup": "popup.html"
     },
