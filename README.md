@@ -1,4 +1,4 @@
-# Prompter  - custom prompts
+<!-- # Prompter  - custom prompts
 **Prompter** is an add-on for the **Prompt Storm** [`Info`](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension, which allows to add your own set of prompt-templates 💡 for **Google Bard** 🤖 [`Info`](https://bard.google.com)
 
 ---
@@ -40,4 +40,6 @@
 
 ![image](https://github.com/abz4375/prompter/assets/90337098/27c8a60b-5b11-480d-83e6-b0b20cc511bc)
 
+ -->
 
+# v2-gemini under development

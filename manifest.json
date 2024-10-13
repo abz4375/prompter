@@ -1,27 +1,36 @@
 {
-    "name": "Prompter",
-    "version": "1.0.0",
-    "description": "Saves prompts for future reuse",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://bard.google.com/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://bard.google.com/*"],
-        "js": ["contentScript.js"]
-      }
-    ],
-    "action": {
-      "default_icon": {
-        "16": "assets/Prompter.png",
-        "24": "assets/Prompter.png",
-        "32": "assets/Prompter.png",
-        "64": "assets/Prompter.png"
-      },
-      "default_title": "Prompter",
-      "default_popup": "popup.html"
-    },
-    "manifest_version": 3
-  }
+	"name": "Prompter",
+	"version": "2.0.0",
+	"description": "Saves prompts for future reuse",
+	"permissions": [
+		"storage",
+		"tabs",
+		"contextMenus"
+	],
+	"host_permissions": [
+		"https://gemini.google.com/*"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://gemini.google.com/*"
+			],
+			"js": [
+				"contentScript.js"
+			]
+		}
+	],
+	"action": {
+		"default_icon": {
+			"16": "assets/Prompter.png",
+			"24": "assets/Prompter.png",
+			"32": "assets/Prompter.png",
+			"64": "assets/Prompter.png"
+		},
+		"default_title": "Prompter"
+	},
+	"manifest_version": 3
+}
