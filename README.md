@@ -1,5 +1,5 @@
 # Prompter  - custom prompts
-**Prompter** is an add-on for the **Prompt Storm** [`Info`](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension, which allows to add your own set of prompt-templates 💡 for **Google Bard** 🤖 [`Info`](https://bard.google.com)
+**Prompter** is an add-on for the **Prompt Storm** [`Info`](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension, which allows to add your own set of prompt-templates 💡 for **Google Gemini** 🤖 [`Info`](https://Gemini.google.com)
 
 ---
 
@@ -10,7 +10,7 @@
 - Go to `🌐 Extensions Tab` in chrome and Turn ON `🛠️ Developer Mode` (It is shown in the top right of the Extensions Tab).
 - Click `📦 Load Unpacked` button on the top bar & select `📁 prompter` folder in which the repo is cloned on your local machine 💾
 - ☑️ Turn ON the Extension
-- **🎉 All Set!**. Enjoy the extension! It is currently available for use on `🤖 Google Bard`'s website: https://bard.google.com.
+- **🎉 All Set!**. Enjoy the extension! It is currently available for use on `🤖 Google Gemini`'s website: https://gemini.google.com.
 
 ---
 ## **📑 User Guide :**
@@ -41,3 +41,5 @@
 ![image](https://github.com/abz4375/prompter/assets/90337098/27c8a60b-5b11-480d-83e6-b0b20cc511bc)
 
 
+<!-- 
+# v2-gemini under development -->
