@@ -63,12 +63,15 @@
     prompterPanel.appendChild(promptStack);
 
     // Load saved prompts
-    savedPrompts.forEach((sPrompt) => {
-      pushPrompt(sPrompt, promptStack);
+    savedPrompts.forEach((sPrompt, index) => {
+      pushPrompt(sPrompt, promptStack, index);
     });
 
     // Functionality to add a new Prompt
-    addPromptBtn.onclick = () => pushPrompt({ pTitle: "", pContent: "" }, promptStack);
+  addPromptBtn.onclick = () => {
+    const newIndex = savedPrompts.length;
+    pushPrompt({ pTitle: "", pContent: "" }, promptStack, newIndex);
+  };
 
     // Attach the panel to the side menu
     const attachPrompterPanel = () => {
@@ -106,7 +109,7 @@
     }
   };
 
-  const pushPrompt = (prompt, promptStack) => {
+  const pushPrompt = (prompt, promptStack, index) => {
     const { pTitle, pContent } = prompt;
 
     // Create prompt window
@@ -160,9 +163,9 @@
       </svg>
     `);
     delBtn.onclick = async () => {
-      savedPrompts = savedPrompts.filter(p => p !== prompt);
+      savedPrompts.splice(index, 1);
       chrome.storage.sync.set({
-        ["prompter375"]: JSON.stringify(savedPrompts),
+        ["prompter.abz4375"]: JSON.stringify(savedPrompts),
       });
       promptStack.removeChild(promptWindow);
     };
