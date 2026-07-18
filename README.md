@@ -1,45 +1,46 @@
-# Prompter  - custom prompts
-**Prompter** is an add-on for the **Prompt Storm** [`Info`](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension, which allows to add your own set of prompt-templates 💡 for **Google Gemini** 🤖 [`Info`](https://Gemini.google.com)
+# Prompter — custom prompt templates
 
----
+Prompter is an add-on for the [Prompt Storm](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) Chrome extension that lets you save and reuse your own prompt templates on [Google Gemini](https://gemini.google.com).
 
-## 🖥️ Run on your local Machine :
-- Install the `Prompt Storm` extension from [here](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig )➡️
-- `🔑 Sign In`  to PromptStorm
-- Clone 🧬 the repo
-- Go to `🌐 Extensions Tab` in chrome and Turn ON `🛠️ Developer Mode` (It is shown in the top right of the Extensions Tab).
-- Click `📦 Load Unpacked` button on the top bar & select `📁 prompter` folder in which the repo is cloned on your local machine 💾
-- ☑️ Turn ON the Extension
-- **🎉 All Set!**. Enjoy the extension! It is currently available for use on `🤖 Google Gemini`'s website: https://gemini.google.com.
+## Why
 
----
-## **📑 User Guide :**
-- Firstly, `Sign In` to PrompStorm.
-- Now, the open the `Prompt Storm` panel by clicking the Lightning Button on the right on Google Bard website.
-  
-  ![image](https://github.com/abz4375/prompter/assets/90337098/fbd36cb5-19f7-45f8-8ee3-0e056e2730ff)
+Prompt Storm doesn't support custom, reusable prompt templates out of the box. Prompter adds a "Your Templates" panel on top of it so you can save prompts locally and reuse them without retyping.
 
-- Inside the panel you will see the `Your Templates` Section that is added-on by **Prompter** .
-- Click on the **Plus Button** `+` on the right to Create a new Prompt Template for Google Bard.
-  
-  ![image](https://github.com/abz4375/prompter/assets/90337098/ca7ae488-e0b3-4fdd-a4ed-f26b76d7e748)
+## Features
 
-- Write your favourite Prompt in the Block, and hit the `Save` Button
+- Add, edit, copy, and delete custom prompt templates directly inside the Prompt Storm panel on Gemini
+- Templates are stored locally in the browser — nothing is uploaded to any cloud service
+- Auto-restores a template you're editing within a few seconds if you start typing over it, so accidental edits aren't lost before you hit Copy
 
-  ![image](https://github.com/abz4375/prompter/assets/90337098/e232b793-00e7-4dea-b5d9-18c75251dddb)
+## Local Setup
 
-- `Done!` : You are all set to boost up your Gen-AI Queries ;).
-  Now, you can Copy your templates anytime by just hitting that `Copy` Button.
+1. Install the [Prompt Storm](https://chrome.google.com/webstore/detail/promptstorm-chatgpt-bard/gkcdaooannhlioejchebhpkllbcackig) extension and sign in
+2. Clone this repo
+3. In Chrome, go to `chrome://extensions`, enable **Developer Mode** (top right)
+4. Click **Load Unpacked** and select the cloned `prompter` folder
+5. Enable the extension — it's active on [gemini.google.com](https://gemini.google.com)
 
-- Also, you can Clear the clutter and delete any template by just hitting the `Delete` Button
+## Usage
 
----
-> `Note` : The Extension saves your prompts only on your local machine, it doesn't upload any kind of data to any Cloud service. All your Prompts are private 👍
-  
-> `🥚Fun Feature` : Just Save your Template and you can re-edit the template by typing into the block, Dont worry, just modify your template and hit the Copy Button, the extensions restores your saved Template within 10 seconds. Give it a try 😉
+Open the Prompt Storm panel on Gemini (lightning icon) — you'll see a **Your Templates** section added by Prompter.
 
-![image](https://github.com/abz4375/prompter/assets/90337098/27c8a60b-5b11-480d-83e6-b0b20cc511bc)
+![Prompt Storm panel with Your Templates section](https://github.com/abz4375/prompter/assets/90337098/fbd36cb5-19f7-45f8-8ee3-0e056e2730ff)
 
+Click **+** to create a new template, write your prompt, and hit **Save**.
 
-<!-- 
-# v2-gemini under development -->
+![Creating a new prompt template](https://github.com/abz4375/prompter/assets/90337098/ca7ae488-e0b3-4fdd-a4ed-f26b76d7e748)
+
+Copy a saved template anytime with the **Copy** button, or remove one with **Delete**.
+
+![Saved template with copy and delete actions](https://github.com/abz4375/prompter/assets/90337098/e232b793-00e7-4dea-b5d9-18c75251dddb)
+
+![Prompter panel overview](https://github.com/abz4375/prompter/assets/90337098/27c8a60b-5b11-480d-83e6-b0b20cc511bc)
+
+## Tech Stack
+
+JavaScript, Chrome Extension Manifest V3, `chrome.storage.local`
+
+## Future Improvements
+
+- Support for additional Gemini-adjacent tools beyond Prompt Storm
+- Import/export templates as JSON for backup or sharing across machines
